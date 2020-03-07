@@ -2,10 +2,15 @@ const container = document.querySelector(".container");
 
 // functions
 function generateBoxes(size) {
-    const containerWidth = container.offsetWidth;
+    const containerWidth = container.getBoundingClientRect().width;
     const boxWidth = containerWidth / size;
-    for (let i = size * size; i < array.length; i++) {
-        const element = array[i];
+    for (let i = 0; i < size * size; i++) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.style.width = `${boxWidth}px`;
+        box.style.height = `${boxWidth}px`;
+        container.appendChild(box);
+        console.log(box.offsetWidth);
     }
 }
 
