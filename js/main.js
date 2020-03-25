@@ -1,6 +1,10 @@
 const container = document.querySelector(".container");
 
 // functions
+function startFunctions() {
+    generateBoxes(16);
+    colorBox();
+}
 function generateBoxes(size) {
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
@@ -13,6 +17,14 @@ function generateBoxes(size) {
         }
     }
 }
+function colorBox() {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.addEventListener("mouseover", () => {
+            box.classList.add("colored");
+        });
+    });
+}
 
 // events
-window.addEventListener("load", generateBoxes(16));
+window.addEventListener("load", startFunctions);

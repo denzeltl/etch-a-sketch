@@ -10,17 +10,16 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
+    background: #e4e4e4;
 }
 
 .wrapper {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #e4e4e4;
     color: #333;
-    padding: 2rem 8rem;
+    padding: 4rem 8rem;
 }
 
 h1 {
@@ -30,8 +29,8 @@ h1 {
 
 .container {
     width: 100%;
-    max-width: 960px;
-    height: 960px;
+    max-width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     border: 1px solid #333;
@@ -46,4 +45,7 @@ h1 {
 .box {
     border: 1px solid #333;
     width: 100%;
+    &.colored {
+        background: #333;
+    }
 }
