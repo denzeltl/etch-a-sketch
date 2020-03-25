@@ -19,7 +19,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: #333;
-    padding: 4rem 8rem;
+    padding: 3rem 8rem;
 }
 
 h1 {
@@ -34,6 +34,7 @@ h1 {
     display: flex;
     flex-direction: column;
     border: 1px solid #333;
+    margin-bottom: 2rem;
 }
 
 .row {
@@ -47,5 +48,20 @@ h1 {
     width: 100%;
     &.colored {
         background: #333;
+    }
+}
+
+.buttons {
+    list-style: none;
+    & .clear {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 3rem;
+        border: 1px solid #333;
+        transition: all 0.1s;
+        &:hover {
+            color: #fff;
+            background: #333;
+        }
     }
 }

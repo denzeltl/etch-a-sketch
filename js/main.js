@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const clear = document.querySelector(".clear");
 
 // functions
 function startFunctions() {
@@ -25,6 +26,11 @@ function colorBox() {
         });
     });
 }
+function clearColors() {
+    const boxNumber = alert("Please enter the size of new container. (Choose from 16-100)", "0");
+    console.log(boxNumber);
+}
 
 // events
 window.addEventListener("load", startFunctions);
+clear.addEventListener("click", clearColors);
