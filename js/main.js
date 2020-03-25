@@ -2,8 +2,8 @@ const container = document.querySelector(".container");
 const clear = document.querySelector(".clear");
 
 // functions
-function startFunctions() {
-    generateBoxes(16);
+function startFunctions(size) {
+    generateBoxes(size);
     colorBox();
 }
 function generateBoxes(size) {
@@ -27,10 +27,17 @@ function colorBox() {
     });
 }
 function clearColors() {
-    const boxNumber = alert("Please enter the size of new container. (Choose from 16-100)", "0");
-    console.log(boxNumber);
+    const boxNumber = prompt("Please enter the size of new container. (Choose from 16-64)");
+    if (boxNumber > 15 && boxNumber < 65) {
+        container.innerHTML = "";
+        startFunctions(boxNumber);
+    } else {
+        clearColors();
+    }
 }
 
 // events
-window.addEventListener("load", startFunctions);
+window.addEventListener("load", () => {
+    startFunctions(16);
+});
 clear.addEventListener("click", clearColors);
